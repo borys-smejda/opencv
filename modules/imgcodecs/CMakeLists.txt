@@ -80,7 +80,7 @@ endif()
 
 if(HAVE_PNG OR HAVE_TIFF OR HAVE_OPENEXR OR HAVE_SPNG)
   ocv_include_directories(${ZLIB_INCLUDE_DIRS})
-  list(APPEND GRFMT_LIBS ${ZLIB_LIBRARIES})
+  list(APPEND GRFMT_LIBS zlib::zlib)
 endif()
 
 if(HAVE_GDAL)

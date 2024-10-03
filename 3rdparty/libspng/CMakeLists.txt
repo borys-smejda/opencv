@@ -23,7 +23,7 @@ if(MSVC)
 endif(MSVC)
 
 add_library(${SPNG_LIBRARY} STATIC ${OPENCV_3RDPARTY_EXCLUDE_FROM_ALL} ${spng_headers} ${spng_sources})
-target_link_libraries(${SPNG_LIBRARY} ${ZLIB_LIBRARIES})
+target_link_libraries(${SPNG_LIBRARY} zlib::zlib)
 
 set_target_properties(${SPNG_LIBRARY}
         PROPERTIES OUTPUT_NAME ${SPNG_LIBRARY}

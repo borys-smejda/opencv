@@ -1463,7 +1463,7 @@ status("  Media I/O: ")
 if(WITH_ZLIB_NG OR HAVE_ZLIB_NG)
   status("    ZLib-Ng:" "build (zlib ver ${ZLIB_VERSION_STRING}, zlib-ng ver ${ZLIBNG_VERSION_STRING})")
 else()
-  status("    ZLib:"   ZLIB_FOUND THEN "${ZLIB_LIBRARIES} (ver ${ZLIB_VERSION_STRING})" ELSE "build (ver ${ZLIB_VERSION_STRING})")
+  status("    ZLib:"   zlib_FOUND THEN "zlib::zlib (ver ${zlib_VERSION_STRING})" ELSE "build (ver ${ZLIB_VERSION_STRING})")
 endif()
 
 if(WITH_JPEG OR HAVE_JPEG)
