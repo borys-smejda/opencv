@@ -461,7 +461,7 @@ ocv_warnings_disable(CMAKE_CXX_FLAGS /wd4456 /wd4457 /wd4312) # vs2015
 ocv_warnings_disable(CMAKE_C_FLAGS /wd4267 /wd4244 /wd4018 /wd4311 /wd4312)
 
 add_library(${TIFF_LIBRARY} STATIC ${OPENCV_3RDPARTY_EXCLUDE_FROM_ALL} ${lib_srcs})
-target_link_libraries(${TIFF_LIBRARY} ${ZLIB_LIBRARIES})
+target_link_libraries(${TIFF_LIBRARY} zlib::zlib)
 
 set_target_properties(${TIFF_LIBRARY}
     PROPERTIES

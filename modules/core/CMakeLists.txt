@@ -166,7 +166,7 @@ endif()
 ocv_create_module(${extra_libs})
 
 ocv_target_link_libraries(${the_module} PRIVATE
-    "${ZLIB_LIBRARIES}" "${OPENCL_LIBRARIES}" "${VA_LIBRARIES}"
+    "zlib::zlib" "${OPENCL_LIBRARIES}" "${VA_LIBRARIES}"
     "${OPENGL_LIBRARIES}"
     "${GLX_LIBRARIES}"
     "${LAPACK_LIBRARIES}" "${CPUFEATURES_LIBRARIES}" "${HALIDE_LIBRARIES}"

@@ -32,7 +32,7 @@ endif()
 
 if(APPLE)
   ocv_include_directories(${ZLIB_INCLUDE_DIRS})
-  list(APPEND HIGHGUI_LIBRARIES ${ZLIB_LIBRARIES})
+  list(APPEND HIGHGUI_LIBRARIES zlib::zlib)
 endif()
 
 if(HAVE_WEBP)
